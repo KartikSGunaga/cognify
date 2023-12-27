@@ -4,6 +4,7 @@ public class PalindromeChecker {
     static Scanner scanner =  new Scanner(System.in);
 
     public boolean isPalindrome(String word){
+        word = word.toLowerCase().replaceAll("\\s", "");
         int length = word.length();
         int start = 0, end = length - 1;
 
@@ -20,7 +21,7 @@ public class PalindromeChecker {
         System.out.println("Welcome to Kartik's Palindrome Checker!");
 
         System.out.println("\nEnter your word: ");
-        String word = scanner.next().toLowerCase();
+        String word = scanner.nextLine();
 
         PalindromeChecker check = new PalindromeChecker();
         if(check.isPalindrome(word))
